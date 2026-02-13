@@ -1,3 +1,4 @@
+import os
 import discord # pyright: ignore[reportMissingImports]
 from discord.ext import commands # pyright: ignore[reportMissingImports]
 
@@ -40,4 +41,4 @@ async def on_message(message):
     await bot.process_commands(message)
 
 # Run the bot with your token
-bot.run('MTQ3MTk5MzgyNzg5MDk1ODM2Ng.G-dVQ4.CMQoa_jo1k5utjnP0JvJ9m3Ij7c98s_U0qMLto')
+bot.run(os.getenv('DISCORD_TOKEN'))
